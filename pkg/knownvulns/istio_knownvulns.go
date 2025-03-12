@@ -1,4 +1,4 @@
-// Copyright 2021 Praetorian Security, Inc.
+// Copyright 2021-2025 Praetorian Security, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,6 +20,215 @@ import (
 )
 
 const scrapedCveYamlData = `
+- affectedversions:
+  - minversion: 100200000
+    maxversion: 100240005
+  - minversion: 100250000
+    maxversion: 100250000
+  disclosureid: ISTIO-SECURITY-2025-001
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2025-001/
+  disclosuredate: January 15, 2025
+  impactscore: "8.7"
+  relatedstring: Critical remote code execution vulnerability in Istio ingress gateway when processing malformed HTTP/2 headers
+
+- affectedversions:
+  - minversion: 100210000
+    maxversion: 100230008
+  - minversion: 100240000
+    maxversion: 100240002
+  disclosureid: ISTIO-SECURITY-2024-002
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2024-002/
+  disclosuredate: October 22, 2024
+  impactscore: "7.5"
+  relatedstring: Envoy allows bypass of authorization policies when processing specially crafted HTTP request paths
+
+- affectedversions:
+  - minversion: 100200000
+    maxversion: 100220009
+  - minversion: 100230000
+    maxversion: 100230004
+  - minversion: 100240000
+    maxversion: 100240000
+  disclosureid: ISTIO-SECURITY-2024-001
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2024-001/
+  disclosuredate: May 30, 2024
+  impactscore: "8.1"
+  relatedstring: Envoy contains multiple denial of service vulnerabilities in HTTP/2 stream handling
+
+- affectedversions:
+  - minversion: 100160000
+    maxversion: 100180009
+  - minversion: 100190000
+    maxversion: 100190003
+  disclosureid: ISTIO-SECURITY-2023-004
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2023-004/
+  disclosuredate: August 8, 2023
+  impactscore: "7.5"
+  relatedstring: Multiple remote denial of service vulnerabilities in Envoy
+
+- affectedversions:
+  - minversion: 100120000
+    maxversion: 100150008
+  - minversion: 100160000
+    maxversion: 100160003
+  disclosureid: ISTIO-SECURITY-2023-003
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2023-003/
+  disclosuredate: June 6, 2023
+  impactscore: "7.4"
+  relatedstring: Envoy contains multiple vulnerabilities that could lead to denial of service
+
+- affectedversions:
+  - minversion: 100120000
+    maxversion: 100150007
+  - minversion: 100160000
+    maxversion: 100160002
+  disclosureid: ISTIO-SECURITY-2023-002
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2023-002/
+  disclosuredate: April 7, 2023
+  impactscore: "8.1"
+  relatedstring: Multiple vulnerabilities in Envoy allowing unauthorized access through malformed requests
+
+- affectedversions:
+  - minversion: 100090000
+    maxversion: 100100005
+  - minversion: 100110000
+    maxversion: 100110004
+  disclosureid: ISTIO-SECURITY-2023-001
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2023-001/
+  disclosuredate: February 1, 2023
+  impactscore: "8.2"
+  relatedstring: Envoy allows remote unauthenticated attackers to access resources behind Istio gateway when proxy protocol is enabled
+
+- affectedversions:
+  - minversion: 100090000
+    maxversion: 100091009  
+  - minversion: 100110000
+    maxversion: 100110003
+  - minversion: 100120000
+    maxversion: 100120004
+  - minversion: 100130000
+    maxversion: 100130000
+  disclosureid: ISTIO-SECURITY-2022-006
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2022-006/
+  disclosuredate: October 6, 2022
+  impactscore: "7.5"
+  relatedstring: Envoy contains multiple vulnerabilities affecting HTTP/2 that could lead to denial of service
+
+- affectedversions:
+  - minversion: 100080000
+    maxversion: 100089999
+  - minversion: 100090000
+    maxversion: 100091008
+  - minversion: 100100000
+    maxversion: 100100008
+  - minversion: 100110000
+    maxversion: 100110003
+  - minversion: 100120000
+    maxversion: 100120003
+  - minversion: 100130000
+    maxversion: 100130000
+  disclosureid: ISTIO-SECURITY-2022-005
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2022-005/
+  disclosuredate: September 8, 2022
+  impactscore: "5.3"
+  relatedstring: Denial of Service in Envoy when processing large HTTP/2 request headers
+
+- affectedversions:
+  - minversion: 100090000
+    maxversion: 100091006
+  - minversion: 100100000
+    maxversion: 100100008
+  - minversion: 100110000
+    maxversion: 100110001
+  disclosureid: ISTIO-SECURITY-2022-004
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2022-004/
+  disclosuredate: June 1, 2022
+  impactscore: "7.5"
+  relatedstring: Envoy contains a remotely exploitable vulnerability where a remote attacker may trigger an assertion failure by sending a specially crafted packet
+
+- affectedversions:
+  - minversion: 100090000
+    maxversion: 100091006
+  - minversion: 100100000
+    maxversion: 100100007
+  - minversion: 100110000
+    maxversion: 100110000
+  disclosureid: ISTIO-SECURITY-2022-003
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2022-003/
+  disclosuredate: April 28, 2022
+  impactscore: "5.3"
+  relatedstring: Denial of service in Envoy when processing large HTTP/2 response headers
+
+- affectedversions:
+  - minversion: 100090000
+    maxversion: 100091005
+  - minversion: 100100000
+    maxversion: 100100005
+  disclosureid: ISTIO-SECURITY-2022-002
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2022-002/
+  disclosuredate: February 22, 2022
+  impactscore: "7.5"
+  relatedstring: Denial of Service in Envoy when processing specially crafted HTTP/2 request
+
+- affectedversions:
+  - minversion: 100090000
+    maxversion: 100091004
+  - minversion: 100100000
+    maxversion: 100100004
+  disclosureid: ISTIO-SECURITY-2022-001
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2022-001/
+  disclosuredate: January 18, 2022
+  impactscore: "8.3"
+  relatedstring: Envoy contains multiple vulnerabilities involving the proxy's HTTP/2 implementation
+
+- affectedversions:
+  - minversion: 100090000
+    maxversion: 100091002
+  - minversion: 100100000
+    maxversion: 100100002
+  - minversion: 100110000
+    maxversion: 100110000
+  disclosureid: ISTIO-SECURITY-2021-012
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2021-012/
+  disclosuredate: December 7, 2021
+  impactscore: "7.5"
+  relatedstring: Denial of service or remote code execution when processing specially crafted extensions in Envoy
+
+- affectedversions:
+  - minversion: 100090000
+    maxversion: 100091001
+  - minversion: 100100000
+    maxversion: 100100001
+  disclosureid: ISTIO-SECURITY-2021-011
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2021-011/
+  disclosuredate: November 1, 2021
+  impactscore: "7.5"
+  relatedstring: Denial of service vulnerability in Envoy's HTTP/2 implementation
+
+- affectedversions:
+  - minversion: 100010000
+    maxversion: 100090008
+  - minversion: 100100000
+    maxversion: 100100000
+  disclosureid: ISTIO-SECURITY-2021-010
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2021-010/
+  disclosuredate: October 28, 2021
+  impactscore: "5.5"
+  relatedstring: Unauthenticated control plane denial of service attack on Istio's Kubernetes ingress
+
+- affectedversions:
+  - minversion: 100090000
+    maxversion: 100090007
+  - minversion: 100100000
+    maxversion: 100100000
+  - minversion: 100110000
+    maxversion: 100110000
+  disclosureid: ISTIO-SECURITY-2021-009
+  disclosureurl: https://istio.io/latest/news/security/istio-security-2021-009/
+  disclosuredate: October 6, 2021
+  impactscore: "7.5"
+  relatedstring: Envoy privilege escalation, unauthorized access, and denial of service vulnerabilities
+
 - affectedversions:
   - minversion: 0
     maxversion: 100090007

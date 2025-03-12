@@ -1,4 +1,4 @@
-// Copyright 2021 Praetorian Security, Inc.
+// Copyright 2021-2025 Praetorian Security, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@ package knownvulns
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"math"
 	"net/http"
 	"regexp"
@@ -188,7 +188,7 @@ func scrapeCVEs() ([]IstioCVEData, error) {
 		return nil, err
 	}
 	defer resp.Body.Close()
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
 	}

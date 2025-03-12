@@ -4,6 +4,8 @@
 
 # Snowcat - A service mesh scanning tool
 
+**Updated for 2025**: Fully compatible with Istio 1.25.0 and newer, with updated CVE database and Go 1.22 support.
+
 [![CI](https://github.com/praetorian-inc/snowcat/workflows/CI/badge.svg)](actions?query=branch%3Adevelopment)
 [![Release](https://github.com/praetorian-inc/snowcat/workflows/Release/badge.svg)](releases)
 

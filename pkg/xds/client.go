@@ -28,6 +28,7 @@ import (
 	"github.com/gogo/protobuf/proto"
 	log "github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 	mcp "istio.io/api/mcp/v1alpha1"
 	istioscheme "istio.io/client-go/pkg/clientset/versioned/scheme"
 	"istio.io/pkg/version"
